@@ -1,5 +1,4 @@
-// chapter 6
-
+// chapter 10
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 

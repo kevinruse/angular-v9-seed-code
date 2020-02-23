@@ -17,3 +17,8 @@ form {
     background-color: #ffa500;
 }
 
+.notRegistered {
+    font-weight: bold;
+    color: #f00;
+}
+

@@ -1,23 +1,31 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  templateUrl: './login.component.html'
 })
+
 export class LoginComponent implements OnInit {
 
-  userName: string;
+  nameForm: FormGroup;
+  userName: any;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) {
+    this.nameForm = formBuilder.group({
+      'userName' : [null]
+    });
+    this.userName = this.nameForm.controls['userName'];
+  }
 
-  ngOnInit(): void {
+  onSubmit(formValues) {
+    console.log(formValues);
   }
-  onSubmit(form: any): void {
-    console.log('you submitted value: ', form);
-  }
+
   log(val) {
     console.log(val);
   }
 
+  ngOnInit() {
+  }
 }

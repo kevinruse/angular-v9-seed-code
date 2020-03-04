@@ -10,6 +10,8 @@ export class ChildComponent implements OnInit {
   @Output()
   login = new EventEmitter<boolean>();
 
+  todaysPlate = new Date();
+
   constructor() { }
 
   ngOnInit(): void {
